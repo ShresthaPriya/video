@@ -1,0 +1,38 @@
+.grid-wrapper {
+  width: 600px;
+  height: 1800px; 
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* 10 columns */
+  grid-template-rows: repeat(20, 1fr);    /* 20 rows */
+  gap: 1px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+}
+
+.grid-cell {
+  position: relative;
+  background-color: white;
+  border: 1px solid rgba(151, 18, 151, 0.1);
+  overflow: hidden;
+}
+
+.colored-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #7B3FC3; /* consistent purple */
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
